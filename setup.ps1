@@ -71,9 +71,12 @@ function Install-Driver {
 # Function to execute the Python script
 function Run-Script {
     Write-Host "Running the Python script..." -ForegroundColor Cyan
-    python windows.py
-    python windows.py
-    python windows.py
+    Start-Process -FilePath "python" -ArgumentList "windows.py"
+    Start-Process -FilePath "python" -ArgumentList "windows.py"
+    Start-Process -FilePath "python" -ArgumentList "windows.py"
+    Start-Process -FilePath "python" -ArgumentList "mobile.py"
+    Start-Process -FilePath "python" -ArgumentList "mobile.py"
+    Start-Process -FilePath "python" -ArgumentList "mobile.py"
     Write-Host "Python script executed successfully." -ForegroundColor Green
 }
 
