@@ -72,6 +72,8 @@ function Install-Driver {
 function Run-Script {
     Write-Host "Running the Python script..." -ForegroundColor Cyan
     python windows.py
+    python windows.py
+    python windows.py
     Write-Host "Python script executed successfully." -ForegroundColor Green
 }
 
