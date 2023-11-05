@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 import time
 
 # Configure Firefox options
@@ -9,24 +10,31 @@ firefox_options.add_argument("--headless")  # Run in background
 # Create a loop to perform the process 1000 times
 for _ in range(1000):
     query = "rummy modern"
-    website = "rummymodern.club"
 
-    # Initialize the Firefox driver
-    driver = webdriver.Firefox(options=firefox_options)
+    # Initialize the Chrome driver
+    driver = webdriver.Chrome(options=firefox_options)
 
     # Use Google to search for the query
-    search_url = f"https://www.google.com/search?q={query}"
+    search_url = f"https://www.google.co.in/search?q={query}"
     driver.get(search_url)
 
     # Wait for a few seconds to allow the page to load
-    time.sleep(2)
+    time.sleep(1)
 
-    # Open the result with the specified website
-    result_url = f"https://{website}"
-    driver.get(result_url)
+    result_title = "Rummy Modern - Download and Get Rs.1500 Real Cash"
+
+    while True:
+        try:
+            # Find the search result link with the specified title
+            result_link = driver.find_element(By.PARTIAL_LINK_TEXT, result_title)
+            break  # If found, exit the loop
+        except:
+            # If the result is not found, scroll down the page
+            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+            time.sleep(1)
+
+    # Click on the search result link
+    result_link.click()
 
     # Close the browser window
     driver.quit()
-
-    # Add a delay before the next iteration (if needed)
-    time.sleep(1)  # Adjust as necessary
