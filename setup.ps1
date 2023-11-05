@@ -12,17 +12,24 @@ function Install-Python {
     }
 
     Write-Host "Installing Python..." -ForegroundColor Green
+    $pythonInstallerUrl = "https://www.python.org/ftp/python/3.12.0/python-3.12.0-amd64.exe"
+
     # Download the latest Python installer
-    Invoke-WebRequest -Uri "https://www.python.org/ftp/python/3.12.0/python-3.12.0-amd64.exe" -OutFile "python-installer.exe"
+    $installerPath = Join-Path $env:USERPROFILE "python-installer.exe"
+    Invoke-WebRequest -Uri $pythonInstallerUrl -OutFile $installerPath
+
     # Run the Python installer silently
-    Start-Process -FilePath "python-installer.exe" -ArgumentList "/quiet", "PrependPath=1" -Wait
+    Start-Process -FilePath $installerPath -ArgumentList "/quiet", "PrependPath=1" -Wait
+
     # Clean up the installer
-    Remove-Item "python-installer.exe"
+    Remove-Item $installerPath
+
     Write-Host "Python installed successfully." -ForegroundColor Green
 
     Write-Host "Adding Python to the PATH..." -ForegroundColor Yellow
-    [Environment]::SetEnvironmentVariable("Path", "$($env:Path);C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe", [System.EnvironmentVariableTarget]::Machine)
-    [System.Environment]::SetEnvironmentVariable("Path", [System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::Machine), [System.EnvironmentVariableTarget]::Process)
+    $pythonInstallPath = Join-Path $env:USERPROFILE "AppData\Local\Programs\Python\Python312\python.exe"
+    [Environment]::SetEnvironmentVariable("Path", "$($env:Path);$pythonInstallPath", [System.EnvironmentVariableTarget]::User)
+    [System.Environment]::SetEnvironmentVariable("Path", [System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::User), [System.EnvironmentVariableTarget]::Process)
 }
 
 # Function to check if pip is already installed
