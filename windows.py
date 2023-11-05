@@ -12,7 +12,7 @@ for _ in range(1000):
     query = "rummy modern"
 
     # Initialize the Chrome driver
-    driver = webdriver.Chrome(options=firefox_options)
+    driver = webdriver.Firefox(options=firefox_options)
 
     # Use Google to search for the query
     search_url = f"https://www.google.co.in/search?q={query}"
