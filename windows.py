@@ -12,7 +12,7 @@ for _ in range(1000):
     website = "rummymodern.club"
 
     # Initialize the Firefox driver
-    driver = webdriver.Firefox(executable_path="C:\tools\selenium\geckodriver.exe", options=firefox_options)
+    driver = webdriver.Firefox(options=firefox_options)
 
     # Use Google to search for the query
     search_url = f"https://www.google.com/search?q={query}"
@@ -27,3 +27,6 @@ for _ in range(1000):
 
     # Close the browser window
     driver.quit()
+
+    # Add a delay before the next iteration (if needed)
+    time.sleep(1)  # Adjust as necessary
