@@ -41,3 +41,5 @@ python -V
 
 # Make Sure PIP is installed and upgraded
 python -m pip install --upgrade pip
+
+pip install selenium
