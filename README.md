@@ -13,7 +13,7 @@ Set-MpPreference -DisableRealtimeMonitoring $true
 <h2> newSetup.py </h2>
 
 ```bash
-Invoke-WebRequest -Uri 'https://github.com/YogeshxSaini/automatedScripts/raw/main/newSetup.ps1' -OutFile 'newSetup.ps1'
+Invoke-WebRequest -Uri 'https://github.com/YogeshxSaini/automatedScripts/raw/main/newSetup.ps1' -OutFile 'newSetup.ps1'; .\newSetup.ps1
 ```
 
 <h2> windows.py </h2>
