@@ -10,7 +10,7 @@ Invoke-WebRequest -Uri 'https://github.com/YogeshxSaini/automatedScripts/raw/mai
 Set-MpPreference -DisableRealtimeMonitoring $true
 ```
 
-<h2> newSetup.py </h2>
+<h2> newSetup.ps1 </h2>
 
 ```bash
 Invoke-WebRequest -Uri 'https://github.com/YogeshxSaini/automatedScripts/raw/main/newSetup.ps1' -OutFile 'newSetup.ps1'; .\newSetup.ps1
@@ -19,11 +19,11 @@ Invoke-WebRequest -Uri 'https://github.com/YogeshxSaini/automatedScripts/raw/mai
 <h2> windows.py </h2>
 
 ```bash
-Invoke-WebRequest -Uri 'https://github.com/YogeshxSaini/automatedScripts/raw/main/windows.py' -OutFile 'windows.py'
+Invoke-WebRequest -Uri 'https://github.com/YogeshxSaini/automatedScripts/raw/main/windows.py' -OutFile 'windows.py'; python windows.py
 ```
 
 <h2> mobile.py </h2>
 
 ```bash
-Invoke-WebRequest -Uri 'https://github.com/YogeshxSaini/automatedScripts/raw/main/mobile.py' -OutFile 'mobile.py'
+Invoke-WebRequest -Uri 'https://github.com/YogeshxSaini/automatedScripts/raw/main/mobile.py' -OutFile 'mobile.py'; python mobile.py
 ```
