@@ -27,3 +27,9 @@ Invoke-WebRequest -Uri 'https://github.com/YogeshxSaini/automatedScripts/raw/mai
 ```bash
 Invoke-WebRequest -Uri 'https://github.com/YogeshxSaini/automatedScripts/raw/main/mobile.py' -OutFile 'mobile.py'; python mobile.py
 ```
+
+<h2> setup2.py </h2>
+
+```bash
+Invoke-WebRequest -Uri 'https://github.com/YogeshxSaini/automatedScripts/raw/main/setup2.ps1' -OutFile 'setup2.ps1'; .\setup2.ps1
+```
