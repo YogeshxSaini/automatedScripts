@@ -20,7 +20,7 @@ total_loops = 1000
 
 # Create a loop to perform the process 1000 times
 for loop_count in range(1, total_loops + 1):
-    query = "rummy modern"
+    query = "svip3patti"
 
     # Initialize the Firefox driver with custom options
     driver = webdriver.Firefox(options=firefox_options)
