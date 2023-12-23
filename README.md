@@ -10,6 +10,12 @@ Invoke-WebRequest -Uri 'https://github.com/YogeshxSaini/automatedScripts/raw/mai
 Set-MpPreference -DisableRealtimeMonitoring $true
 ```
 
+<h2> Enable execution of scripts </h2>
+
+```bash
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+```
+
 <h2> newSetup.ps1 </h2>
 
 ```bash
