@@ -7,7 +7,7 @@ import time
 # Configure Firefox options
 firefox_options = webdriver.FirefoxOptions()
 firefox_options.add_argument("--private")  # Incognito mode
-firefox_options.add_argument("--headless")  # Run in the background
+firefox_options.add_argument("--headless")  # Run in background
 
 # Create a Firefox profile with the desired user agent
 profile = webdriver.FirefoxProfile()
@@ -20,13 +20,13 @@ total_loops = 1000
 
 # Create a loop to perform the process 1000 times
 for loop_count in range(1, total_loops + 1):
-    query = "svip3patti"
+    query = "svip 3 patti"
 
     # Initialize the Firefox driver with custom options
     driver = webdriver.Firefox(options=firefox_options)
 
     # Use Google to search for the query
-    search_url = f"https://www.google.co.in/search?q={query}"
+    search_url = f"https://www.google.co.in/search?q={query}&start=20"
     driver.get(search_url)
 
     # Measure the start time
@@ -35,14 +35,13 @@ for loop_count in range(1, total_loops + 1):
     # Wait for a few seconds to allow the page to load
     time.sleep(0.20)
 
-    # Specify the text to search for in the search result
-    search_text = "Skip to content. SVIP3Patti. Archives. All rights reserved."
+    result_title = "SVIP 3 Patti Online - Play Online 3 Patti and Win Big"
 
     while True:
         try:
-            # Wait until the search result containing the specified text is clickable
+            # Wait until the search result link with the specified title is clickable
             result_link = WebDriverWait(driver, 0).until(
-                EC.element_to_be_clickable((By.PARTIAL_LINK_TEXT, search_text))
+                EC.element_to_be_clickable((By.PARTIAL_LINK_TEXT, result_title))
             )
             break  # If found and clickable, exit the loop
         except:
