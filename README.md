@@ -28,6 +28,12 @@ Invoke-WebRequest -Uri 'https://github.com/YogeshxSaini/automatedScripts/raw/mai
 Invoke-WebRequest -Uri 'https://github.com/YogeshxSaini/automatedScripts/raw/main/mobile.py' -OutFile 'mobile.py'; python mobile.py
 ```
 
+<h2> svip.py </h2>
+
+```bash
+Invoke-WebRequest -Uri 'https://github.com/YogeshxSaini/automatedScripts/raw/main/svip.py' -OutFile 'svip.py'; python svip.py
+```
+
 <h2> setup2.py </h2>
 
 ```bash
