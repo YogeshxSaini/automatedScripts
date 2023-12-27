@@ -39,6 +39,16 @@ Invoke-WebRequest -Uri 'https://github.com/YogeshxSaini/automatedScripts/raw/mai
 ```bash
 Invoke-WebRequest -Uri 'https://github.com/YogeshxSaini/automatedScripts/raw/main/svip.py' -OutFile 'svip.py'; python svip.py
 ```
+<h2> install_selenium.sh </h2>
+```bash
+bash <(curl -s https://raw.githubusercontent.com/YogeshxSaini/automatedScripts/main/install_selenium.sh)
+```
+
+<h2> Run on linux </h2>
+```bash
+python3 <(curl -s https://raw.githubusercontent.com/YogeshxSaini/automatedScripts/main/svip.py)
+```
+
 
 <h2> setup2.py </h2>
 
