@@ -18,15 +18,14 @@ sudo apt install -f
 sudo apt install -y libglib2.0-0 libnss3 libgconf-2-4 libfontconfig1
 
 # Download ChromeDriver
-CHROME_DRIVER_VERSION=$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE)
-wget https://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip
+wget https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/120.0.6099.109/linux64/chromedriver-linux64.zip
 
 # Unzip ChromeDriver
 sudo apt install unzip
 unzip chromedriver_linux64.zip
 
 # Move ChromeDriver to a directory in your PATH
-sudo mv chromedriver /usr/local/bin/
+sudo mv chromedriver_linux64/* /usr/local/bin/
 
 # Clean up downloaded files
 rm chromedriver_linux64.zip google-chrome-stable_current_amd64.deb
