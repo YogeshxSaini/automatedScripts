@@ -47,5 +47,10 @@ echo "Google Chrome version:"
 google-chrome --version
 
 # Install script
-curl https://pastebin.com/raw/uQ1PcjEs -o script.py
+## svip3patti
+# curl https://pastebin.com/raw/uQ1PcjEs -o script.py
+
+##svip 3 patti
+curl https://pastebin.com/raw/reGnnsHv -o script.py
+
 python3 script.py
