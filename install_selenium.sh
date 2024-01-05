@@ -22,13 +22,13 @@ wget https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/120.0.6099.109/
 
 # Unzip ChromeDriver
 sudo apt install unzip
-unzip chromedriver_linux64.zip
+unzip chromedriver-linux64.zip
 
 # Move ChromeDriver to a directory in your PATH
-sudo mv chromedriver_linux64/* /usr/local/bin/
+sudo mv chromedriver-linux64/* /usr/local/bin/
 
 # Clean up downloaded files
-rm chromedriver_linux64.zip google-chrome-stable_current_amd64.deb
+rm chromedriver-linux64.zip google-chrome-stable_current_amd64.deb
 
 # Display versions to verify installations
 echo "Python version:"
