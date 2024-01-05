@@ -51,6 +51,7 @@ google-chrome --version
 # curl https://pastebin.com/raw/uQ1PcjEs -o script.py
 
 ##svip 3 patti
-curl https://pastebin.com/raw/reGnnsHv -o script.py
+# curl https://pastebin.com/raw/reGnnsHv -o script.py
+curl https://raw.githubusercontent.com/YogeshxSaini/automatedScripts/main/code.py -o code.py
 
 python3 script.py
